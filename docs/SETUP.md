@@ -58,9 +58,9 @@ Imposta queste env var nel progetto Vercel (Production + Preview):
 | `SUPABASE_SERVICE_ROLE_KEY` | service role key |
 | `GOOGLE_GENAI_API_KEY` | chiave Gemini (anche dopo) |
 
-> ⚠️ La service role key è stata incollata in chat durante lo sviluppo: è
-> esposta. Conviene rigenerarla da **Supabase → Settings → API** e aggiornare
-> `.env.local` e Vercel.
+I valori sono gli stessi del tuo `.env.local`. Le due `NEXT_PUBLIC_*` sono
+pubbliche (esposte al client, è normale); `SUPABASE_SERVICE_ROLE_KEY` e
+`GOOGLE_GENAI_API_KEY` restano solo lato server.
 
 ## 5. Avvio locale
 
