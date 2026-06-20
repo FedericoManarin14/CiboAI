@@ -18,9 +18,14 @@ export default async function LoginPage({
   return (
     <main className="min-h-dvh flex flex-col justify-center px-6 py-10 max-w-sm mx-auto w-full">
       <div className="mb-8 text-center">
-        <div className="mx-auto mb-3 grid h-16 w-16 place-items-center rounded-2xl bg-brand text-3xl">
-          🥗
-        </div>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/icon-192.png"
+          alt="CiboAI"
+          width={64}
+          height={64}
+          className="mx-auto mb-3 h-16 w-16 rounded-2xl border border-border"
+        />
         <h1 className="text-2xl font-bold tracking-tight">CiboAI</h1>
         <p className="mt-1 text-sm text-muted">Conta le calorie dalla foto del piatto.</p>
       </div>
