@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🥗 CiboAI
 
-## Getting Started
+App personale di conteggio calorie con riconoscimento del cibo da foto.
+PWA mobile-first: fotografi il piatto, l'AI riconosce ingredienti, grammi e
+nutrienti e li aggiunge al diario del giorno.
 
-First, run the development server:
+## Funzioni
+
+- 📷 **Foto → AI** (Gemini 2.5 Flash): riconoscimento ingredienti + stima nutrienti, con schermata di revisione editabile.
+- 📦 **Barcode** e 🔎 **ricerca per nome** via Open Food Facts.
+- ✏️ **Inserimento manuale** di alimenti.
+- 📊 Diario giornaliero con 4 pasti, anello calorie, barre macro, micronutrienti.
+- 🎯 Obiettivo calorico personalizzato (BMR Mifflin-St Jeor → TDEE).
+- 🏃 Log attività fisica (kcal bruciate aggiunte al budget).
+- ⚖️ Log peso e grafici di peso/calorie nel tempo.
+
+## Stack
+
+Next.js 16 (App Router, TS) · Tailwind CSS v4 · Supabase (Auth + Postgres + RLS)
+· Google Gemini · Open Food Facts · Recharts · Zod · Vitest.
+
+## Setup
+
+Vedi [`docs/SETUP.md`](docs/SETUP.md) — schema DB, creazione account, chiave AI, deploy.
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+> La logica nutrizionale è in moduli puri testati: `src/lib/nutrition/`.
